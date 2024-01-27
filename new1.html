@@ -1,0 +1,131 @@
+<?php
+session_start();
+
+if (!isset($_SESSION["authenticated"]) || $_SESSION["authenticated"] !== true) {
+    header("Location: login.html"); // Redirect to the login page if the user is not authenticated
+    exit();
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Health Hub</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #2f6830;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Title Styles */
+        h1 {
+            font-family: "Times New Roman", serif; /* Change the font family */
+            font-size: 36px; /* Increase the font size */
+           }   
+
+        /* Navigation Styles */
+        nav {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav li {
+            display: inline;
+            margin: 10px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 20px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Health Hub</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="hosp.html">Appointment</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section>
+            <h2>ABOUT US</h2>
+            <p>Welcome to Health Hub! We are dedicated to providing you with the latest information and services related to health and wellness.</p>
+        </section>
+
+        <section>
+            <h2>SERVICES</h2>
+            <p>We offer a wide range of services, including:
+                <ul>
+                    <li>Medical Consultation</li>
+                    <li>Nutrition Counseling</li>
+                    <li>Fitness Classes</li>
+                    <li>Wellness Workshops</li>
+                </ul>
+            </p>
+        </section>
+        
+        <section>
+            <h2>INTRODUCING</h2>
+            <img src="project.png" alt="About Us Image"width="1000" height="">
+            <p>We help you to live the best life the healthiest.   <B>"HEALTH IS WEALTH !!"</B></p>
+        </section>
+        
+       <section>
+            <h2>LATEST ARTICLES</h2>
+            <p>Stay informed with our latest health and wellness articles:
+                <ul>
+                    <li><a href="#">10 Tips for a Healthy Lifestyle</a></li>
+                    <li><a href="#">The Benefits of Regular Exercise</a></li>
+                    <li><a href="#">Eating Well: A Guide to Nutrition</a></li>
+                </ul>
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2023 Health Hub. All rights reserved.
+    </footer>
+</body>
+</html>

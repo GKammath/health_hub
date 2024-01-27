@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #307247;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="text"], input[type="date"], input[type="time"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #2d6341;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2><b>Book Health Hub Clinic Appointment</b></h2>
+        <form action="connection.php" method="post">
+            <label for="full_name">Full Name:</label>
+            <input type="text" name="full_name" id="full_name" placeholder="Your Full Name" required>
+
+            <label for="userid">User ID:</label>
+            <input type="text" name="userid" id="userid" placeholder="Your User ID" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" name="phone" id="phone" placeholder="Your Phone Number" required>
+
+            <label for="appointment_date">Appointment Date:</label>
+            <input type="date" name="appointment_date" id="appointment_date" required>
+
+            <label for="appointment_time">Appointment Time:</label>
+            <input type="time" name="appointment_time" id="appointment_time" required>
+
+            <input type="submit" value="Book Appointment">
+        </form>
+    </div>
+</body>
+</html>
